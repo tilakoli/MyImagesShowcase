@@ -23,3 +23,24 @@ body {
   object-position: 100% center;
   cursor: grab;
 }
+
+.mainImageContainer {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mainImage {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}

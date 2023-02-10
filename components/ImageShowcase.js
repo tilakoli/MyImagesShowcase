@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { imagesData } from "@/utils/imageData";
 
-const Test = () => {
+const ImageGallery = () => {
+  const [showImageModal, setShowImageModal] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState();
+
+  useEffect(() => {
+    const keyDownHandler = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        handleKeyPress();
+      }
+    };
+    document.addEventListener("keydown", keyDownHandler);
+    // 👇️ clean up event listener
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, []);
+
+  const handleKeyPress = () => {
+    showImageModal === true ? setShowImageModal(false) : null;
+  };
+
   if (typeof window !== "undefined") {
     const track = document.getElementById("image-track");
 
     const handleOnDown = (e) => (track.dataset.mouseDownAt = e.clientX);
 
-    const handleClick = (e) => {
-      console.log("something handle");
-    };
     const handleOnUp = () => {
       track.dataset.mouseDownAt = "0";
       track.dataset.prevPercentage = track.dataset.percentage;
@@ -61,29 +80,44 @@ const Test = () => {
 
     window.ontouchmove = (e) => handleOnMove(e.touches[0]);
   }
+
+  const handleImageClick = (e) => {
+    setShowImageModal(true);
+    setSelectedImage(e?.target?.src);
+  };
+
   return (
     <>
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <img className="image" src="/assets/03.jpg" draggable="false" />
-        <img className="image" src="/assets/image3.jpg" draggable="false" />
-
-        <img className="image" src="/assets/12.jpg" draggable="false" />
-
-        <img className="image" src="/assets/10.jpg" draggable="false" />
-
-        <img className="image" src="/assets/02.jpg" draggable="false" />
-
-        <img className="image" src="/assets/13.jpg" draggable="false" />
-
-        <img className="image" src="/assets/01.jpg" draggable="false" />
-
-        <img className="image" src="/assets/04.jpg" draggable="false" />
-
-        <img className="image" src="/assets/09.jpg" draggable="false" />
-        <img className="image" src="/assets/image5.jpg" draggable="false" />
+        {imagesData.map((image, index) => {
+          return (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              onClick={handleImageClick}
+              className="image"
+              key={index}
+              src={image.src}
+              draggable="false"
+              alt={image?.alt}
+            />
+          );
+        })}
       </div>
+      {showImageModal && (
+        <div
+          className="mainImageContainer"
+          onClick={() => setShowImageModal(false)}
+        >
+          {/*  eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={selectedImage}
+            alt={"showcase image"}
+            className="mainImage"
+          />
+        </div>
+      )}
     </>
   );
 };
 
-export default Test;
+export default ImageGallery;

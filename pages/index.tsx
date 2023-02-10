@@ -1,10 +1,9 @@
-import Head from "next/head";
-import TestComponent from "../components/Test";
+import ImageGallery from "../components/ImageShowcase";
 
 export default function Home() {
   return (
     <>
-      <TestComponent />
+      <ImageGallery />
     </>
   );
 }
