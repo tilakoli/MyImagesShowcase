@@ -20,7 +20,7 @@ const ImageGallery = () => {
   }, []);
 
   const handleKeyPress = () => {
-    showImageModal === true ? setShowImageModal(false) : null;
+    showImageModal === true && setShowImageModal(false);
   };
 
   if (typeof window !== "undefined") {
