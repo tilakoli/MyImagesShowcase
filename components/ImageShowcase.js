@@ -93,6 +93,7 @@ const ImageGallery = () => {
           return (
             // eslint-disable-next-line @next/next/no-img-element
             <img
+              loading="lazy"
               onDoubleClick={handleImageClick}
               className="image"
               key={index}
