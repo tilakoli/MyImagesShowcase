@@ -4,7 +4,7 @@ export const imagesData = [
     alt: "My cats image Kanxi",
   },
   {
-    src: "/assets/image3.jpg",
+    src: "/assets/14.jpg",
     alt: "smiling baby with grandma",
     id: "image3",
   },
@@ -20,14 +20,14 @@ export const imagesData = [
     src: "/assets/02.jpg",
     alt: "Boudhanath stupa kathmandu Nepal",
   },
+  // {
+  //   src: "/assets/13.jpg",
+  //   alt: "Sunset at kathmandu nepal",
+  // },
   {
-    src: "/assets/13.jpg",
-    alt: "Sunset at kathmandu nepal",
-  },
-  {
-    src: "/assets/01.jpg",
-    alt: "Boudhanath stupa kathmandu nepal",
-  },
+    src: "/assets/rhododendron.jpg",
+    alt: "Rhododendron",
+  }, 
   {
     src: "/assets/04.jpg",
     alt: "Sunset at kathmandu nepal",
@@ -36,7 +36,21 @@ export const imagesData = [
     src: "/assets/09.jpg",
     alt: "Morning landscape view kathmandu",
   },
+  
   {
-    src: "/assets/image5.jpg",
+    src: "/assets/waytoDestination.jpg",
+    alt: "Way to Ghorepani Village",
   },
+  {
+    src: "/assets/village.jpg",
+    alt: "Small village in hilly region of nepal.",
+  }, 
+  {
+    src: "/assets/stones.jpg",
+    alt: "Stacking stones...",
+  },
+  {
+    src: "/assets/traditionalHouse.jpg",
+    alt: "Traditional Nepali house.",
+  }
 ];
