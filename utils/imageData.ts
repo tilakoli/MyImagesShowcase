@@ -20,10 +20,6 @@ export const imagesData = [
     src: "/assets/02.jpg",
     alt: "Boudhanath stupa kathmandu Nepal",
   },
-  // {
-  //   src: "/assets/13.jpg",
-  //   alt: "Sunset at kathmandu nepal",
-  // },
   {
     src: "/assets/rhododendron.jpg",
     alt: "Rhododendron",
@@ -52,5 +48,19 @@ export const imagesData = [
   {
     src: "/assets/traditionalHouse.jpg",
     alt: "Traditional Nepali house.",
+  },
+  {
+    src: "/assets/dogsmiling.jpg",
+    alt: "Dog Smiling.",
+  }
+  ,{
+    src: "/assets/her.jpg",
+    alt: "her",
+  } ,{
+    src: "/assets/himalayays.jpg",
+    alt: "himalayas",
+  },{
+    src: "/assets/stackingstones.jpg",
+    alt: "stacked stones",
   }
 ];
