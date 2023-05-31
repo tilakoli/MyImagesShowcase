@@ -101,6 +101,9 @@ const ImageGallery = () => {
       >
         Double click to view!
       </h3>
+      {/* <div className="headContainer">
+        <div className="box">{"  ->"}</div>
+      </div> */}
 
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         {imagesData.map((image, index) => {
