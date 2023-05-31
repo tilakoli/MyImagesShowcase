@@ -88,6 +88,20 @@ const ImageGallery = () => {
 
   return (
     <>
+      <h3
+        style={{
+          color: "white",
+          position: "absolute",
+          top: "5%",
+          left: "45%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        Double tap to view!
+      </h3>
+
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         {imagesData.map((image, index) => {
           return (
