@@ -99,7 +99,7 @@ const ImageGallery = () => {
           justifyContent: "center",
         }}
       >
-        Double tap to view!
+        Double click to view!
       </h3>
 
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
