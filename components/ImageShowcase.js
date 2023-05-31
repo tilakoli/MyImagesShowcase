@@ -99,12 +99,24 @@ const ImageGallery = () => {
           justifyContent: "center",
         }}
       >
+        Click and drag to Scroll!
+      </h3>{" "}
+      <h3
+        style={{
+          color: "white",
+          position: "absolute",
+          top: "10%",
+          left: "46%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         Double click to view!
       </h3>
       {/* <div className="headContainer">
         <div className="box">{"  ->"}</div>
       </div> */}
-
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         {imagesData.map((image, index) => {
           return (
